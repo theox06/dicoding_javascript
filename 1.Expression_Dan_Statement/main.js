@@ -1,0 +1,1 @@
+const age = 18; const name = 'Jeconia Conny'; console.log(`Nama saya adalah ${name}, dan umur saya ${age} tahun`);
