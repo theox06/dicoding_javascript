@@ -1,0 +1,2 @@
+export const agencyName = "Keluarga Cemara Group";
+export const vtuberName = ['Fiona Cookies and Cream CH', 'Marzya Choco Mint CH', 'Benny Dark Chocolate CH', 'Laura Strawberry Cake CH'];

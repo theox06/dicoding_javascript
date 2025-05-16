@@ -7,9 +7,9 @@ export function fetchFunction() {
   const securityProtocol = "SHA-256";
 
   console.log(`
-        Vtuber name : ${name}
-        Vtuber original name : ${originalName}
-        Uid : ${uid}
-        Active status : ${isActive}
-        Security Protocol : ${securityProtocol}`);
+     Vtuber name : ${name}
+     Vtuber original name : ${originalName}
+     Uid : ${uid}
+     Active status : ${isActive}
+     Security Protocol : ${securityProtocol}`);
 }

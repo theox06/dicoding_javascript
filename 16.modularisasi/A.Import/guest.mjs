@@ -4,8 +4,8 @@ export function fetchFunction() {
   const division = "Computer Processor Architecture Leader";
 
   console.log(`
-    Guest Name : ${name}
-    Guest Nickname : ${nickName}
-    Job : ${division}`
+     Guest Name : ${name}
+     Guest Nickname : ${nickName}
+     Job : ${division}`
     );
 }
