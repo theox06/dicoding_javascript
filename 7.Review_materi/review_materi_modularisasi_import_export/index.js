@@ -1,29 +1,52 @@
-const vtuberList = {
-    Vtuber1: "Fiona Cookies and Cream CH (フィオーナー・クキズ・アンド・クリーム CH)",
-    vtuber2: "Marzya Chocomint CH (マージャ・チョッコー・ミント CH)",
-    vtuber3: "Benny Cheese CH (ベニー・チーズ CH)",
-    vtuber4: "Jeremy Croissant CH (ジェレミー・クァーサーント CH)",
-    vtuber5: "Laura Strawberry CH (ローラー・ストローブレ CH)",
-    vtuber6: "Levitia Blueberry CH レビティア・ブルーベリー CH)",
-    vtuber7: "Conny Lemon CH (コニー・レモン CH)",
-    vtuber8: "Kevin Coffee CH (ケビン・コフィー CH)",
-}
+let { vtuberList, getGuest, CryptoJS, roomConnectionToken, hashedArray, listVtuber, tokens } = require('./states');
 
-const roomConnectionToken = {
-    room1: 0,
-    room2: 0,
-}
 
-const isServerActive = true;
-const isVtuberActive = true;
 
-function specialRoomConnection(requestVtuber, roomConnectionToken, isServerReady = false) {
-    if (!isServerActive) {
-        console.log(`Server is under maintenance, sorry for this inconvenience`);
-        return;
+
+function specialRoomConnection(requestVtuber, roomToken) {
+
+    for (let i = 0; i < requestVtuber.length; i++) {
+        listVtuber = requestVtuber[i];
+
+        if (listVtuber.isActive === true) {
+            console.log(`${listVtuber.vtuberName} is ready for room connection`);
+        } else {
+            console.log(`Sorry, this vtuber is not ready for room connection`);
+        }
+        
     }
 
-    if (!(typeof vtuberList == 'object')) {
-        console.log(``)
+
+    for (let i = 0; i < roomToken.length; i++) {
+        tokens = roomToken[i];
+
+        const hashedTokens = CryptoJS.SHA256(tokens.token).toString(CryptoJS.enc.Hex);
+        tokens.token = hashedTokens;
+
+        console.log(tokens);
+        console.log(`This information is provided by TRISTAR Tekno Mulia Sakti IT Solution \u00A9 2025 TRISTAR Digital Interactive Media`)
     }
+
+    if (listVtuber.isActive === true && tokens.token === tokens) {
+        console.log(`Room Connection is already booked!`)
+    }
+
+
+    
+
+
+
+    
+
+
+
+
+    
+
+    
+
+
+
 }
+
+specialRoomConnection(vtuberList, roomConnectionToken);
